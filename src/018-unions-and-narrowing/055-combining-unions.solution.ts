@@ -15,7 +15,7 @@ const handleSuccessCase = (code: SuccessCode) => {
   // An imaginary function where we only handle the success cases
 
   type test = Expect<Equal<typeof code, "200" | "201" | "204">>;
-};
+};≤
 
 const handleAllCase = (code: HttpCode) => {
   // An imaginary function where we handle all the cases
