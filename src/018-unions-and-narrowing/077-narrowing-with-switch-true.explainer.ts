@@ -22,7 +22,10 @@ function calculateArea(shape: Shape) {
     case shape.kind === "square": {
       return shape.sideLength * shape.sideLength;
     }
+    default:
+      break;
   }
+  return 0;
 }
 
 it("Should calculate the area of a circle", () => {

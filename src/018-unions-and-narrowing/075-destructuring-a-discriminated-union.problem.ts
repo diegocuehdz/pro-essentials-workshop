@@ -11,7 +11,7 @@ type Square = {
   sideLength: number;
 };
 
-type Shape = Circle | Square;
+type Shape = { radius?: number; sideLength?: number } & (Circle | Square);
 
 function calculateArea({ kind, radius, sideLength }: Shape) {
   if (kind === "circle") {

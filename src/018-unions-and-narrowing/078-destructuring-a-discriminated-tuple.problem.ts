@@ -4,7 +4,10 @@ type User = {
   id: string;
 };
 
-type ApiResponse = [string, User[] | string];
+type SuccessResponse = ["success", User[]];
+type ErrorResponse = ["error", string];
+
+type ApiResponse = SuccessResponse | ErrorResponse;
 
 async function fetchData(): Promise<ApiResponse> {
   try {
@@ -32,7 +35,6 @@ async function exampleFunc() {
     type test = Expect<Equal<typeof value, User[]>>;
   } else {
     console.error(value);
-
     type test = Expect<Equal<typeof value, string>>;
   }
 }
