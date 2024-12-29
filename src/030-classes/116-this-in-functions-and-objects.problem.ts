@@ -1,6 +1,6 @@
 import { it, expect } from "vitest";
 
-function add() {
+function add(this: { x: number; y: number }) {
   return this.x + this.y;
 }
 

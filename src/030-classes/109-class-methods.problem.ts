@@ -3,6 +3,15 @@ import { expect, it } from "vitest";
 class CanvasNode {
   x = 0;
   y = 0;
+
+  move(x: number, y: number): void {
+    this.x = x;
+    this.y = y;
+  }
+  moveVariant = (x: number, y: number) => {
+    this.x = x;
+    this.y = y;
+  };
 }
 
 it("Should be able to move", () => {
