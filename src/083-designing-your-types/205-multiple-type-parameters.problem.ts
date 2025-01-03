@@ -2,7 +2,7 @@ import { Equal, Expect } from "@total-typescript/helpers";
 
 // CODE
 
-type PromiseFunc = (input: any) => Promise<any>;
+type PromiseFunc<I, R> = (input: I) => Promise<R>;
 
 // TESTS
 
